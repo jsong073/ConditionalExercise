@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://kit.fontawesome.com/060e8bc0c6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+</head>
+<body>
+<form action="#" th:action="@{/songform}" th:object="${song}" method="post">
+    <div class="card">
+        <div class="card-header">
+            Enter a song's information
+        </div>
+        <div class="card-body">
+            <ol >
+                <li class="card-title">Name: <input type="text" th:field="*{name}"/></li>
+                <li class="card-title">Album: <input type="text" th:field="*{album}"/></li>
+                <li class="card-title">Artist: <input type="text" th:field="*{artist}"/></li>
+                <li class="card-title">Year Released: <input type="text" th:field="*{year}"/></li>
+            </ol>
+            <div class="card-text">
+                <div class="container-fluid">
+                    Rating: <br/>
+                    <input type="radio" id="one" th:field="*{rating}" th:value="1"/>
+                    <label for="one">1</label>
+                    <input type="radio" id="two" th:field="*{rating}" th:value="2"/>
+                    <label for="two">2</label>
+                    <input type="radio" id="three" th:field="*{rating}" th:value="3"/>
+                    <label for="three">3</label>
+                    <input type="radio" id="four" th:field="*{rating}" th:value="4"/>
+                    <label for="four">4</label>
+                    <input type="radio" id="five" th:field="*{rating}" th:value="5"/>
+                    <label for="five">5</label>
+                    <input type="radio" id="six" th:field="*{rating}" th:value="6"/>
+                    <label for="six">6</label>
+                    <input type="radio" id="seven" th:field="*{rating}" th:value="7"/>
+                    <label for="seven">7</label>
+                    <input type="radio" id="eight" th:field="*{rating}" th:value="8"/>
+                    <label for="eight">8</label>
+                    <input type="radio" id="nine" th:field="*{rating}" th:value="9"/>
+                    <label for="nine">9</label>
+                    <input type="radio" id="ten" th:field="*{rating}" th:value="10"/>
+                    <label for="ten">10</label>
+                </div>
+                <div class="container-fluid">
+                    Genre:
+                    <input type="radio" id="rock" th:field="*{genre}" th:value="Rock"/>
+                    <label for="rock">Rock</label>
+                    <input type="radio" id="pop" th:field="*{genre}" th:value="Pop"/>
+                    <label for="pop">Pop</label>
+                    <input type="radio" id="classic" th:field="*{genre}" th:value="Classic"/>
+                    <label for="classic">Classic</label>
+                    <input type="radio" id="edm" th:field="*{genre}" th:value="EDM"/>
+                    <label for="edm">EDM</label>
+                    <input type="radio" id="other" th:field="*{genre}" th:value="Other"/>
+                    <label for="other">Other</label>
+                </div>
+                <div class="container-fluid">
+                    In Stock:
+                    <input type="radio" id="yes" th:field="*{inStock}" th:value="true"/>
+                    <label for="yes">Yes</label>
+                    <input type="radio" id="no" th:field="*{inStock}" th:value="false"/>
+                    <label for="no">No</label>
+                </div>
+            </div>
+            <input type="submit" class="btn btn-primary" value="Submit">
+        </div>
+    </div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>
